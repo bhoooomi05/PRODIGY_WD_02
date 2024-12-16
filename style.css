@@ -1,0 +1,148 @@
+/* Add a smooth gradient background animation */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #ffb300, #0047ff, #33ccff);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Heading styling */
+.heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+/* Stopwatch container styling */
+.stopwatch-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    width: 360px;
+    border: 2px solid #fff;
+}
+
+/* Time display styling */
+.time-display {
+    font-size: 55px;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Box styling beneath the time display */
+.box-line {
+    margin-top: 20px;
+    width: 80%;
+    height: 4px;
+    background: linear-gradient(135deg, #3498db, #2c8fae);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.controls button {
+    padding: 14px 24px;
+    margin: 10px;
+    font-size: 16px;
+    background: linear-gradient(145deg, #3498db, #2c8fae);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 120px;
+}
+
+.controls button:hover {
+    background: linear-gradient(145deg, #2c8fae, #3498db);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+}
+
+/* Lap times styling */
+.lap-times {
+    margin-top: 30px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.lap-times h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Lap times table-like design */
+.lap-times ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lap-times li {
+    background: #2980b9;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lap-times li:nth-child(odd) {
+    background: #3498db;
+}
+
+.lap-times li:nth-child(even) {
+    background: #2980b9;
+}
+
+.lap-times li .lap-number {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.lap-times li .lap-time {
+    font-weight: normal;
+    font-size: 1.1em;
+    text-align: right;
+}
+
+/* Scrollbar styling for lap times */
+.lap-times ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lap-times ul::-webkit-scrollbar-thumb {
+    background: #2980b9;
+    border-radius: 5px;
+}
+
+.lap-times ul::-webkit-scrollbar-track {
+    background: #eee;
+}
